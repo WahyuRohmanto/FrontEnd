@@ -44,7 +44,11 @@ const users = [
  * Hint: Gunakan for/for-of.
  * Note: Ubah function menggunakan arrow function.
  */
-function all() {}
+const all = () => {
+  for(const user of users){
+    console.log(user);
+  }
+}
 
 /**
  * TODO 3
