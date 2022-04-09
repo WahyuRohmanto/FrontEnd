@@ -15,6 +15,12 @@
     font-size: 1.95rem;
     margin-bottom: 0.5rem;
   }
+
+  .movie__type {
+    color: red;
+    font-size: 1.95rem;
+    margin-bottom: 0.5rem;
+  }
   
   .movie__date {
     color: #64748b;

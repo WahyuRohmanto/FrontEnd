@@ -25,15 +25,15 @@
 }
 
 .add__label {
-  padding-bottom: 1rem;
+  margin-top: 20px;
 }
 
 .add__input {
-  margin-bottom: 1rem;
   padding: 5px;
   border-radius: 10px;
   border-color: #4361ee;
   margin-top: 5px;
+  text-transform: capitalize; 
 }
 
 .add__button {
@@ -46,6 +46,22 @@
   margin-bottom: 1rem;
   margin-top: 6px;
 }
+
+
+
+.add__select {
+  padding: 10px 43px;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 6px;
+  background-color: #4361ee;
+  color: #ffff;
+  border-color: black;
+}
+
+
+
+
 
 /* large screen */
 @media (min-width: 992px) {

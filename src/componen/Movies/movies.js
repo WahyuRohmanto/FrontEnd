@@ -1,13 +1,13 @@
 import styles from "./movies.module.css";
 import Movie from "../Movie/Movie";
-import data from "../../utils/constants/data";
-import { useState } from "react";
+import { nanoid } from "nanoid";
 
-function Movies() {
-  const [movies, setMovies] = useState(data);
+function Movies(props) {
+  // destructing
+  const { movies, setMovies } = props;
   function tambahFilm() {
     const movie = {
-      id: "jksdf",
+      id: nanoid(),
       title: "Spiral Jigsaw",
       year: "2021",
       type: "Movie",
