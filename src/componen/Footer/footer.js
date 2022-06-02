@@ -1,12 +1,12 @@
-import styles from "./footer.module.css";
+import FooterStyled from "./footer.styled";
 function Footer() {
   return (
-    <div className={styles.container}>
-      <footer className = {styles.footer}>
-        <h2 className={styles.footer__title}>Movie App</h2>
-        <p className = {styles.footer__author}>Created By Wahyu</p>
+    <FooterStyled>
+      <footer>
+        <h2>Movie App</h2>
+        <p>Created By Wahyu</p>
       </footer>
-    </div>
+    </FooterStyled>
   );
 }
 
