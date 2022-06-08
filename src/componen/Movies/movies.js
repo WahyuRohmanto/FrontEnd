@@ -4,7 +4,7 @@ import { nanoid } from "nanoid";
 
 function Movies(props) {
   // destructing
-  const { movies, setMovies } = props;
+  const { title, movies, setMovies } = props;
   function tambahFilm() {
     const movie = {
       id: nanoid(),
@@ -18,7 +18,7 @@ function Movies(props) {
   return (
     <div className={styles.container}>
       <section className={styles.movies}>
-        <h2 className={styles.movies__title}>Latest Movies</h2>
+        <h2 className={styles.movies__title}>{title}</h2>
         <div className={styles.movie__container}>
           {/*
            * looping data movies : map

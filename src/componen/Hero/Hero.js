@@ -3,28 +3,24 @@ import axios from "axios";
 
 import Button from "../ui/button";
 import HeroStyled from "./hero.styled";
+import ENDPOINTS from "../../utils/constants/endpoints";
 
 function Hero() {
   const [movie, setMovie] = useState("");
-  const API_KEY = process.env.REACT_APP_API_KEY;
   const genres = movie && movie.genres.map((genre) => genre.name).join(", ");
   const idTrailer = movie && movie.videos.results[0].key;
 
   async function getTrendingMovie() {
-    const URL = `https://api.themoviedb.org/3/trending/movie/day?api_key=${API_KEY}`;
-    const data = await axios(URL);
+    const data = await axios(ENDPOINTS.TRENDING);
     return data.data.results[0];
   }
-
   async function getDetailMovie() {
     const trending = await getTrendingMovie();
     const id = trending.id;
-    const URL = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&append_to_response=videos`;
-    const data = await axios(URL);
+
+    const data = await axios(ENDPOINTS.TRENDINGID(id));
     setMovie(data.data);
   }
-
-  console.log(movie);
 
   useEffect(getDetailMovie, []);
 

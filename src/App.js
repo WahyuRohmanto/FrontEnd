@@ -5,6 +5,7 @@ import GlobalStyle from "./componen/GlobalStyle";
 import Layout from "./layout";
 import Home from "./pages/Home";
 import CreateMovie from "./pages/Movie/create";
+import Detail from "./pages/Movie/detail";
 import NowPlaying from "./pages/Movie/nowplaying";
 import Popular from "./pages/Movie/popular";
 import TopRated from "./pages/Movie/topRated";
@@ -13,15 +14,17 @@ import theme from "./utils/constants/theme";
 function App() {
   return (
     <>
-      <ThemeProvider theme={theme}> 
-      <GlobalStyle />
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/movie/detail" element={<Detail />} />
             <Route path="/movie/create" element={<CreateMovie />} />
             <Route path="/movie/popular" element={<Popular />} />
             <Route path="/movie/now" element={<NowPlaying />} />
             <Route path="/movie/top" element={<TopRated />} />
+            <Route path="/movie/:id" element={<Detail />} />
           </Routes>
         </Layout>
       </ThemeProvider>
