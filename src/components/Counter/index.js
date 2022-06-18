@@ -21,7 +21,7 @@ function Counter() {
   }
 
   function manipulateDOM() {
-    console.log("Lifecycle: Component dimount");
+    ("Lifecycle: Component dimount");
 
     /**
      * Melakukan side effect: access dom.
@@ -40,7 +40,7 @@ function Counter() {
    */
   useEffect(manipulateDOM, [angka]);
 
-  console.log("Lifecycle: Component dirender");
+  ("Lifecycle: Component dirender");
 
   return (
     <div>

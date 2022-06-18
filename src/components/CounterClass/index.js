@@ -38,7 +38,7 @@ class Counter extends React.Component {
       angka: this.state.angka + 1,
     });
 
-    console.log(this.state.angka);
+    this.state.angka;
   }
 
   /**
